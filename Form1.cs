@@ -78,13 +78,16 @@ namespace Swoger_CourseProject_Part1
             titleText.Focus();
         }
 
-        private void MB(string Text, String Title) //MessageBox Method, generates the message box.
+        //MessageBox Method, generates the message box
+        private void MB(string Text, String Title)
         {
             MessageBox.Show(Text, Title,
                     System.Windows.Forms.MessageBoxButtons.OKCancel,
                     System.Windows.Forms.MessageBoxIcon.Error);
         }
-        private void titleLabel_Click(object sender, EventArgs e) //Generates Easteregg when clicking Title
+
+        //Generates Easteregg when clicking Title
+        private void titleLabel_Click(object sender, EventArgs e)
         {
             MB("This is an EasterEgg LOL!", "Easter Egg :D");
         }
@@ -97,7 +100,7 @@ namespace Swoger_CourseProject_Part1
             //Shortcut for New Line
             string nl = "\r\n"; 
 
-//Build the output Text
+                //Build the output Text
                 sb.Append(titleText.Text);
                 sb.Append(nl);
                 sb.Append(artistText.Text);
