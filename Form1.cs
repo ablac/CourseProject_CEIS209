@@ -65,7 +65,7 @@ namespace Swoger_CourseProject_Part1
         }
 
         //Clear's all text from boxes, and moves focus to Title Box.
-        private void clear()
+        private void clear() //Method to clear all text box's
         {
             //Clears Text
             titleText.Text = String.Empty;
@@ -78,13 +78,13 @@ namespace Swoger_CourseProject_Part1
             titleText.Focus();
         }
 
-        private void MB(string Text, String Error)
+        private void MB(string Text, String Title) //MessageBox Method, generates the message box.
         {
-            MessageBox.Show(Text, Error,
+            MessageBox.Show(Text, Title,
                     System.Windows.Forms.MessageBoxButtons.OKCancel,
                     System.Windows.Forms.MessageBoxIcon.Error);
         }
-        private void titleLabel_Click(object sender, EventArgs e)
+        private void titleLabel_Click(object sender, EventArgs e) //Generates Easteregg when clicking Title
         {
             MB("This is an EasterEgg LOL!", "Easter Egg :D");
         }
