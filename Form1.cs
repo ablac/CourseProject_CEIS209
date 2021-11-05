@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,15 +29,15 @@ namespace Swoger_CourseProject_Part1
         {
             //Error Checking/Not Blank
             if (string.IsNullOrEmpty(titleText.Text)) //Check Title
-                MB("The Title can't be blank!"); //Message Box Pass Through Title
+                MB("The Title can't be blank!", "Error!"); //Message Box Pass Through Title
             else if (string.IsNullOrEmpty(artistText.Text)) //Check Artist
-                MB("The Artist can't be blank!"); //Message Box Pass Through Artist
+                MB("The Artist can't be blank!", "Error!"); //Message Box Pass Through Artist
             else if (string.IsNullOrEmpty(genreText.Text)) //Check Genre
-                MB("The Genre can't be blank!"); //Message Box Pass Through Genre
+                MB("The Genre can't be blank!", "Error!"); //Message Box Pass Through Genre
             else if (string.IsNullOrEmpty(yearText.Text)) //Check Year
-                MB("The Year can't be blank!"); //Message Box Pass Through Year
+                MB("The Year can't be blank!", "Error!"); //Message Box Pass Through Year
             else if (string.IsNullOrEmpty(urlText.Text)) //Check URL
-                MB("The URL can't be blank!"); //Message Box Pass Through URL
+                MB("The URL can't be blank!", "Error!"); //Message Box Pass Through URL
             else
             {
                 //Build the output text
@@ -77,15 +78,15 @@ namespace Swoger_CourseProject_Part1
             titleText.Focus();
         }
 
-        private void MB(string Text)
+        private void MB(string Text, String Error)
         {
-            MessageBox.Show(Text, "ERROR!",
+            MessageBox.Show(Text, Error,
                     System.Windows.Forms.MessageBoxButtons.OKCancel,
                     System.Windows.Forms.MessageBoxIcon.Error);
         }
         private void titleLabel_Click(object sender, EventArgs e)
         {
-            MB("This is an EasterEgg LOL!");
+            MB("This is an EasterEgg LOL!", "Easter Egg :D");
         }
     }
 }
