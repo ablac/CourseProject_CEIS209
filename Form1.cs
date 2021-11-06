@@ -39,6 +39,7 @@ namespace Swoger_CourseProject_Part1
             else if (string.IsNullOrEmpty(urlText.Text)) //Check URL
                 MB("The URL can't be blank!", "Error!"); //Message Box Pass Through URL
             else
+
             {
                 //Build the output text
                 songList.Items.Add(titleText.Text);
