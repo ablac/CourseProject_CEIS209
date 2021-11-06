@@ -39,7 +39,6 @@ namespace Swoger_CourseProject_Part1
             else if (string.IsNullOrEmpty(urlText.Text)) //Check URL
                 MB("The URL can't be blank!", "Error!"); //Message Box Pass Through URL
             else
-
             {
                 //Build the output text
                 songList.Items.Add(titleText.Text);
@@ -69,11 +68,22 @@ namespace Swoger_CourseProject_Part1
         private void clear() //Method to clear all text box's
         {
             //Clears Text
-            titleText.Text = String.Empty;
-            artistText.Text = String.Empty;
-            genreText.Text = String.Empty;
-            yearText.Text = String.Empty;
-            urlText.Text = String.Empty;
+            //titleText.Text = String.Empty;
+            //artistText.Text = String.Empty;
+            //genreText.Text = String.Empty;
+            //yearText.Text = String.Empty;
+            //urlText.Text = String.Empty;
+
+            Action<Control.ControlCollection> func = null;
+            func = (controls) =>
+            {
+                foreach (Control control in controls)
+                    if (control is TextBox)
+                        (control as TextBox).Clear();
+                    else
+                        func(control.Controls);
+            };
+            func(Controls);
 
             //Sets Focus
             titleText.Focus();
