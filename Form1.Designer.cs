@@ -47,13 +47,15 @@
             this.titelName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.findButton = new System.Windows.Forms.Button();
+            this.clearSong = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // addButton
             // 
             this.addButton.BackColor = System.Drawing.SystemColors.HotTrack;
             this.addButton.Font = new System.Drawing.Font("Broadway", 12F, System.Drawing.FontStyle.Bold);
-            this.addButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.addButton.ForeColor = System.Drawing.Color.White;
             this.addButton.Location = new System.Drawing.Point(122, 451);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(195, 78);
@@ -239,11 +241,39 @@
             this.label2.TabIndex = 995;
             this.label2.Text = "November 2021";
             // 
+            // findButton
+            // 
+            this.findButton.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.findButton.Font = new System.Drawing.Font("Broadway", 12F, System.Drawing.FontStyle.Bold);
+            this.findButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.findButton.Location = new System.Drawing.Point(122, 568);
+            this.findButton.Name = "findButton";
+            this.findButton.Size = new System.Drawing.Size(195, 78);
+            this.findButton.TabIndex = 7;
+            this.findButton.Text = "Find Song";
+            this.findButton.UseVisualStyleBackColor = false;
+            this.findButton.Click += new System.EventHandler(this.findButton_Click);
+            // 
+            // clearSong
+            // 
+            this.clearSong.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.clearSong.Font = new System.Drawing.Font("Broadway", 12F, System.Drawing.FontStyle.Bold);
+            this.clearSong.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.clearSong.Location = new System.Drawing.Point(354, 568);
+            this.clearSong.Name = "clearSong";
+            this.clearSong.Size = new System.Drawing.Size(195, 78);
+            this.clearSong.TabIndex = 1000;
+            this.clearSong.Text = "Clear";
+            this.clearSong.UseVisualStyleBackColor = false;
+            this.clearSong.Click += new System.EventHandler(this.clearSong_Click);
+            // 
             // VideoManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1258, 849);
+            this.Controls.Add(this.clearSong);
+            this.Controls.Add(this.findButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.titelName);
@@ -291,6 +321,8 @@
         private System.Windows.Forms.Label titelName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button findButton;
+        private System.Windows.Forms.Button clearSong;
     }
 }
 
