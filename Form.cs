@@ -83,7 +83,9 @@ namespace Swoger_CourseProject_Part1
                 MB($"Song {titleText.Text} Found", "Found Song!", 4);
             }
             else
+            {
                 MB($"Song {titleText.Text} not found", "Error!", 1);
+            }
         }
         //*******************************
         //**********Clear Button*********
