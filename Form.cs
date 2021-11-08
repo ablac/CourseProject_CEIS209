@@ -26,9 +26,9 @@ namespace Swoger_CourseProject_Part1
         {
             InitializeComponent();
         }
-        //*************************
-        //*****Add Song Button*****
-        //*************************
+        //*******************************
+        //********Add Song Button********
+        //*******************************
         private void addButton_Click(object sender, EventArgs e)
         {
             StringBuilder sb = new StringBuilder(outputText.Text);
@@ -73,9 +73,9 @@ namespace Swoger_CourseProject_Part1
             //Put the output text into the output box
             outputText.Text = sb.ToString();
         }
-        //**************************
-        //*****Find Song Button*****
-        //**************************
+        //*******************************
+        //********Find Song Button*******
+        //*******************************
         private void findButton_Click(object sender, EventArgs e)
         {
             if (SongInList(titleText.Text))
@@ -85,16 +85,16 @@ namespace Swoger_CourseProject_Part1
             else
                 MB($"Song {titleText.Text} not found", "Error!", 1);
         }
-        //**********************
-        //*****Clear Button*****
-        //**********************
+        //*******************************
+        //**********Clear Button*********
+        //*******************************
         private void clearSong_Click(object sender, EventArgs e)
         {
             clear();
         }
-        //***************************
-        //*****Easter Egg Button*****
-        //***************************
+        //*******************************
+        //*******Easter Egg Button*******
+        //*******************************
         private void titleLabel_Click(object sender, EventArgs e)
         {
             MB("This is an EasterEgg LOL!", "Easter Egg :D", 3);

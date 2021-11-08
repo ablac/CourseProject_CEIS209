@@ -1,6 +1,11 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -11,9 +16,9 @@ namespace Swoger_CourseProject_Part1
         //***********************************************************************************************************
         //*************************************************FUNCTIONS*************************************************
         //***********************************************************************************************************
-        //****************************
-        //*****Song List Function*****
-        //****************************
+        //*******************************
+        //*******Song List Function******
+        //*******************************
         private bool SongInList(string SongTitle)
         {
             bool inList = false;
@@ -60,9 +65,9 @@ namespace Swoger_CourseProject_Part1
             }
             return isValid;
         }
-        //************************
-        //*****Clear Function*****
-        //************************
+        //*******************************
+        //*********Clear Function********
+        //*******************************
         private void clear() //Method to clear all text box's
         {
             //Clears Text
@@ -75,9 +80,9 @@ namespace Swoger_CourseProject_Part1
             //Sets Focus
             titleText.Focus();
         }
-        //******************************
-        //*****Message Box Function*****
-        //******************************
+        //*******************************
+        //******Message Box Function*****
+        //*******************************
         private void MB(string Text, String Title, int Icon)
         {
             if (Icon == 1) //ERROR
