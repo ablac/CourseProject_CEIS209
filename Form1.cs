@@ -73,6 +73,7 @@ namespace Swoger_CourseProject_Part1
                 //Output built text
                 outputText.Text = sb.ToString();
                 songList.Items.Add(titleText.Text);
+                clear();
             }
         }
 
