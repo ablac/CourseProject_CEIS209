@@ -30,22 +30,27 @@ namespace Swoger_CourseProject_Part1
             if (string.IsNullOrEmpty(titleText.Text)) //Check Title
             {
                 MB("The Title can't be blank!", "Error!"); //Message Box Pass Through Title
+                isValid = false;
             }
             else if (string.IsNullOrEmpty(artistText.Text)) //Check Artist
             {
                 MB("The Artist can't be blank!", "Error!"); //Message Box Pass Through Artist
+                isValid = false;
             }
             else if (string.IsNullOrEmpty(genreText.Text)) //Check Genre
             {
                 MB("The Genre can't be blank!", "Error!"); //Message Box Pass Through Genre
+                isValid = false;
             }
             else if (string.IsNullOrEmpty(yearText.Text)) //Check Year
             {
                 MB("The Year can't be blank!", "Error!"); //Message Box Pass Through Year
+                isValid = false;
             }
             else if (string.IsNullOrEmpty(urlText.Text)) //Check URL
             {
-                MB("The URL can't be blank!", "Error!"); //Message Box Pass Through URL        
+                MB("The URL can't be blank!", "Error!"); //Message Box Pass Through URl
+                isValid = false;
             }
             return isValid;
         }
