@@ -90,4 +90,7 @@ namespace Swoger_CourseProject_Part1
                 MessageBox.Show(Text, Title, System.Windows.Forms.MessageBoxButtons.OKCancel, System.Windows.Forms.MessageBoxIcon.Information);
         }
     }
-    }
+}
+//***********************************************************************************************************
+//**************************************BUTTONS CAN BE FOUND IN FORM.CS**************************************
+//***********************************************************************************************************

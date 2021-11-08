@@ -34,7 +34,7 @@ namespace Swoger_CourseProject_Part1
             StringBuilder sb = new StringBuilder(outputText.Text);
             string nl = "\r\n";
 
-            if(ValidInput())
+            if (ValidInput())
             {
                 //Build the output Text
                 sb.Append(titleText.Text);
@@ -101,6 +101,6 @@ namespace Swoger_CourseProject_Part1
         }
     }
 }
-//******************************************************************
-//**************FUNCTIONS CAN BE FOUND IN FUNCTIONS.CS**************
-//******************************************************************
+//***********************************************************************************************************
+//***********************************FUNCTIONS CAN BE FOUND IN FUNCTIONS.CS**********************************
+//***********************************************************************************************************
