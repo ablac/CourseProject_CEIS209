@@ -29,27 +29,27 @@ namespace Swoger_CourseProject_Part1
             bool isValid = true;
             if (string.IsNullOrEmpty(titleText.Text)) //Check Title
             {
-                MB("The Title can't be blank!", "Error!"); //Message Box Pass Through Title
+                MB("The Title can't be blank!", "Error!", 1); //Message Box Pass Through Title
                 isValid = false;
             }
             else if (string.IsNullOrEmpty(artistText.Text)) //Check Artist
             {
-                MB("The Artist can't be blank!", "Error!"); //Message Box Pass Through Artist
+                MB("The Artist can't be blank!", "Error!", 1); //Message Box Pass Through Artist
                 isValid = false;
             }
             else if (string.IsNullOrEmpty(genreText.Text)) //Check Genre
             {
-                MB("The Genre can't be blank!", "Error!"); //Message Box Pass Through Genre
+                MB("The Genre can't be blank!", "Error!", 1); //Message Box Pass Through Genre
                 isValid = false;
             }
             else if (string.IsNullOrEmpty(yearText.Text)) //Check Year
             {
-                MB("The Year can't be blank!", "Error!"); //Message Box Pass Through Year
+                MB("The Year can't be blank!", "Error!", 1); //Message Box Pass Through Year
                 isValid = false;
             }
             else if (string.IsNullOrEmpty(urlText.Text)) //Check URL
             {
-                MB("The URL can't be blank!", "Error!"); //Message Box Pass Through URl
+                MB("The URL can't be blank!", "Error!", 1); //Message Box Pass Through URl
                 isValid = false;
             }
             return isValid;
@@ -115,6 +115,22 @@ namespace Swoger_CourseProject_Part1
             outputText.Text = sb.ToString();
         }
 
+        private void findButton_Click(object sender, EventArgs e)
+        {
+            if (SongInList(titleText.Text))
+            {
+                MB($"Song {titleText.Text} Found", "Found Song!", 4);
+            }
+            else
+                MB($"Song {titleText.Text} not found", "Error!", 1);
+        }
+
+        //Generates Easteregg when clicking Title
+        private void titleLabel_Click(object sender, EventArgs e)
+        {
+            MB("This is an EasterEgg LOL!", "Easter Egg :D", 3);
+        }
+
         //Clear's all text from boxes, and moves focus to Title Box.
         private void clear() //Method to clear all text box's
         {
@@ -129,31 +145,22 @@ namespace Swoger_CourseProject_Part1
             titleText.Focus();
         }
 
-        //MessageBox Method, generates the message box
-        private void MB(string Text, String Title)
-        {
-            MessageBox.Show(Text, Title,
-                    System.Windows.Forms.MessageBoxButtons.OKCancel,
-                    System.Windows.Forms.MessageBoxIcon.Error);
-        }
-
-        //Generates Easteregg when clicking Title
-        private void titleLabel_Click(object sender, EventArgs e)
-        {
-            MB("This is an EasterEgg LOL!", "Easter Egg :D");
-        }
-
-        private void findButton_Click(object sender, EventArgs e)
-        {
-            if (SongInList(titleText.Text))
-                MB("Song Found", "Found Song!");
-            else
-                MB("Song not found", "Error!");
-        }
-
         private void clearSong_Click(object sender, EventArgs e)
         {
             clear();
+        }
+
+        //MessageBox Method, generates the message box
+        private void MB(string Text, String Title, int Icon)
+        {
+            if (Icon == 1) //ERROR
+                MessageBox.Show(Text, Title, System.Windows.Forms.MessageBoxButtons.OKCancel, System.Windows.Forms.MessageBoxIcon.Error);
+            else if (Icon == 2) //QUESTION
+                MessageBox.Show(Text, Title, System.Windows.Forms.MessageBoxButtons.OKCancel, System.Windows.Forms.MessageBoxIcon.Question);
+            else if (Icon == 3) //Exclamation
+                MessageBox.Show(Text, Title, System.Windows.Forms.MessageBoxButtons.OKCancel, System.Windows.Forms.MessageBoxIcon.Exclamation);
+            else if (Icon == 4) //Information
+                MessageBox.Show(Text, Title, System.Windows.Forms.MessageBoxButtons.OKCancel, System.Windows.Forms.MessageBoxIcon.Information);
         }
     }
 }
