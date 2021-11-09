@@ -79,13 +79,9 @@ namespace Swoger_CourseProject_Part1
         private void findButton_Click(object sender, EventArgs e)
         {
             if (SongInList(titleText.Text))
-            {
                 MB($"Song {titleText.Text} Found", "Found Song!", MessageBoxIcon.Information);
-            }
             else
-            {
                 MB($"Song {titleText.Text} not found", "Error!", MessageBoxIcon.Error);
-            }
         }
         //*******************************
         //**********Clear Button*********
