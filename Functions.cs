@@ -40,27 +40,27 @@ namespace Swoger_CourseProject_Part1
             bool isValid = true;
             if (string.IsNullOrEmpty(titleText.Text)) //Check Title
             {
-                MB("The Title can't be blank!", "Error!", 1); //Message Box Pass Through Title
+                MB("The Title can't be blank!", "Error!", MessageBoxIcon.Error); //Message Box Pass Through Title
                 isValid = false;
             }
             else if (string.IsNullOrEmpty(artistText.Text)) //Check Artist
             {
-                MB("The Artist can't be blank!", "Error!", 1); //Message Box Pass Through Artist
+                MB("The Artist can't be blank!", "Error!", MessageBoxIcon.Error); //Message Box Pass Through Artist
                 isValid = false;
             }
             else if (string.IsNullOrEmpty(genreText.Text)) //Check Genre
             {
-                MB("The Genre can't be blank!", "Error!", 1); //Message Box Pass Through Genre
+                MB("The Genre can't be blank!", "Error!", MessageBoxIcon.Error); //Message Box Pass Through Genre
                 isValid = false;
             }
             else if (string.IsNullOrEmpty(yearText.Text)) //Check Year
             {
-                MB("The Year can't be blank!", "Error!", 1); //Message Box Pass Through Year
+                MB("The Year can't be blank!", "Error!", MessageBoxIcon.Error); //Message Box Pass Through Year
                 isValid = false;
             }
             else if (string.IsNullOrEmpty(urlText.Text)) //Check URL
             {
-                MB("The URL can't be blank!", "Error!", 1); //Message Box Pass Through URl
+                MB("The URL can't be blank!", "Error!", MessageBoxIcon.Error); //Message Box Pass Through URl
                 isValid = false;
             }
             return isValid;
@@ -83,16 +83,11 @@ namespace Swoger_CourseProject_Part1
         //*******************************
         //******Message Box Function*****
         //*******************************
-        private void MB(string Text, String Title, int Icon)
+        private void MB(string Text, String Title, MessageBoxIcon ICON)
         {
-            if (Icon == 1) //ERROR
-                MessageBox.Show(Text, Title, System.Windows.Forms.MessageBoxButtons.OKCancel, System.Windows.Forms.MessageBoxIcon.Error);
-            else if (Icon == 2) //QUESTION
-                MessageBox.Show(Text, Title, System.Windows.Forms.MessageBoxButtons.OKCancel, System.Windows.Forms.MessageBoxIcon.Question);
-            else if (Icon == 3) //Exclamation
-                MessageBox.Show(Text, Title, System.Windows.Forms.MessageBoxButtons.OKCancel, System.Windows.Forms.MessageBoxIcon.Exclamation);
-            else if (Icon == 4) //Information
-                MessageBox.Show(Text, Title, System.Windows.Forms.MessageBoxButtons.OKCancel, System.Windows.Forms.MessageBoxIcon.Information);
+            MessageBox.Show(Text, Title,
+                    MessageBoxButtons.OKCancel,
+                    ICON);
         }
     }
 }

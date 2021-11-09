@@ -80,11 +80,11 @@ namespace Swoger_CourseProject_Part1
         {
             if (SongInList(titleText.Text))
             {
-                MB($"Song {titleText.Text} Found", "Found Song!", 4);
+                MB($"Song {titleText.Text} Found", "Found Song!", MessageBoxIcon.Information);
             }
             else
             {
-                MB($"Song {titleText.Text} not found", "Error!", 1);
+                MB($"Song {titleText.Text} not found", "Error!", MessageBoxIcon.Error);
             }
         }
         //*******************************
@@ -99,7 +99,7 @@ namespace Swoger_CourseProject_Part1
         //*******************************
         private void titleLabel_Click(object sender, EventArgs e)
         {
-            MB("This is an EasterEgg LOL!", "Easter Egg :D", 3);
+            MB("This is an EasterEgg LOL!", "Easter Egg :D", MessageBoxIcon.Exclamation);
         }
     }
 }
