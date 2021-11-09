@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Swoger_CourseProject_Part1
 {
-    partial class VideoManager
+    public partial class VideoManager
     {
         //***********************************************************************************************************
         //*************************************************FUNCTIONS*************************************************
