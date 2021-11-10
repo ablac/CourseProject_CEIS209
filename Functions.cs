@@ -85,9 +85,7 @@ namespace Swoger_CourseProject_Part1
         //*******************************
         private void MB(string Text, String Title, MessageBoxIcon ICON)
         {
-            MessageBox.Show(Text, Title,
-                    MessageBoxButtons.OKCancel,
-                    ICON);
+            MessageBox.Show(Text, Title, MessageBoxButtons.OKCancel, ICON);
         }
     }
 }
