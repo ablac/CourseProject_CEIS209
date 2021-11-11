@@ -9,6 +9,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/* CEIS 209
+ * Devry University
+ * Keith S
+ * 11/5/2021
+*/
+
 namespace Swoger_CourseProject_Part1
 {
     public partial class VideoManager
@@ -63,7 +69,7 @@ namespace Swoger_CourseProject_Part1
                 MB("The URL can't be blank!", "Error!", MessageBoxIcon.Error); //Message Box Pass Through URl
                 isValid = false;
             }
-            return isValid;
+            return isValid; 
         }
         //*******************************
         //*********Clear Function********
@@ -78,7 +84,7 @@ namespace Swoger_CourseProject_Part1
             urlText.Text = String.Empty;
 
             //Sets Focus
-            titleText.Focus();
+            _ = titleText.Focus();
         }
         //*******************************
         //******Message Box Function*****
