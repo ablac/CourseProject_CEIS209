@@ -31,11 +31,11 @@ namespace Swoger_CourseProject_Part1
         //*******************************
         private void addButton_Click(object sender, EventArgs e)
         {
-            StringBuilder sb = new StringBuilder(outputText.Text);
-            string nl = "\r\n";
-
             if (ValidInput())
             {
+                StringBuilder sb = new StringBuilder(String.Empty);
+                string nl = "\r\n";
+
                 //Build the output Text
                 sb.Append(titleText.Text);
                 sb.Append(nl);
