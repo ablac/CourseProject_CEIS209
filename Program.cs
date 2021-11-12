@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Swoger_CourseProject_Part1
+namespace Swoger_CourseProject
 {
     internal static class Program
     {

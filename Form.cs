@@ -15,7 +15,7 @@ using System.Windows.Forms;
  * 11/5/2021
 */
 
-namespace Swoger_CourseProject_Part1
+namespace Swoger_CourseProject
 {
     public partial class VideoManager : Form
     {

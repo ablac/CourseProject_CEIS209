@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Swoger_CourseProject_Part1.Properties
+namespace Swoger_CourseProject.Properties
 {
 
 

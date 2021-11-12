@@ -1,4 +1,4 @@
-﻿namespace Swoger_CourseProject_Part1
+﻿namespace Swoger_CourseProject
 {
     partial class VideoManager
     {
