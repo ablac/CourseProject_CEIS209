@@ -97,7 +97,7 @@ namespace Swoger_CourseProject
             //Clears Text
             titleText.Clear();
             artistText.Clear();
-            genreText.ResetText();
+            genreText.SelectedIndex = -1;
             yearText.Clear();
             urlText.Clear();
 
