@@ -15,13 +15,14 @@ using System.Windows.Forms;
  * 11/5/2021
 */
 
+//***********************************************************************************************************
+//*********************************************FORM BUTTONS**************************************************
+//***********************************************************************************************************
+
 namespace Swoger_CourseProject
 {
     public partial class VideoManager : Form
     {
-        //***********************************************************************************************************
-        //*********************************************FORM BUTTONS**************************************************
-        //***********************************************************************************************************
         public VideoManager()
         {
             InitializeComponent();
@@ -78,10 +79,15 @@ namespace Swoger_CourseProject
         //*******************************
         private void findButton_Click(object sender, EventArgs e)
         {
+            //Create messagebox is song is found/not found.
             if (SongInList(titleText.Text))
+            {
                 MB($"Song {titleText.Text} Found", "Found Song!", MessageBoxIcon.Information);
+            }
             else
+            {
                 MB($"Song {titleText.Text} not found", "Error!", MessageBoxIcon.Error);
+            }
         }
         //*******************************
         //**********Clear Button*********

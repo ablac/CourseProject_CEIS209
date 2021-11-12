@@ -15,13 +15,14 @@ using System.Windows.Forms;
  * 11/5/2021
 */
 
+//***********************************************************************************************************
+//*************************************************FUNCTIONS*************************************************
+//***********************************************************************************************************
+
 namespace Swoger_CourseProject
 {
     public partial class VideoManager
     {
-        //***********************************************************************************************************
-        //*************************************************FUNCTIONS*************************************************
-        //***********************************************************************************************************
         //*******************************
         //*******Song List Function******
         //*******************************
@@ -33,8 +34,11 @@ namespace Swoger_CourseProject
                 if (SongTitle == currentSong)
                 {
                     inList = true;
+                    //Break out of loop
+                    break;
                 }
             }
+            //Return Result
             return inList;
         }
         //*******************************
@@ -43,33 +47,43 @@ namespace Swoger_CourseProject
         private bool ValidInput()
         {
             bool isValid = true;
-            if (string.IsNullOrEmpty(titleText.Text)) //Check Title
+            //Check Title
+            if (string.IsNullOrEmpty(titleText.Text))
             {
-                MB("The Title can't be blank!", "Error!", MessageBoxIcon.Error); //Message Box Pass Through Title
+                //Message Box Pass Through Title
+                MB("The Title can't be blank!", "Error!", MessageBoxIcon.Error);
                 titleText.Focus();
                 isValid = false;
             }
-            else if (string.IsNullOrEmpty(artistText.Text)) //Check Artist
+            //Check Artist
+            else if (string.IsNullOrEmpty(artistText.Text))
             {
-                MB("The Artist can't be blank!", "Error!", MessageBoxIcon.Error); //Message Box Pass Through Artist
+                //Message Box Pass Through Artist
+                MB("The Artist can't be blank!", "Error!", MessageBoxIcon.Error);
                 artistText.Focus();
                 isValid = false;
             }
-            else if (string.IsNullOrEmpty(genreText.Text)) //Check Genre
+            //Check Genre
+            else if (string.IsNullOrEmpty(genreText.Text))
             {
-                MB("The Genre can't be blank!", "Error!", MessageBoxIcon.Error); //Message Box Pass Through Genre
+                //Message Box Pass Through Genre
+                MB("The Genre can't be blank!", "Error!", MessageBoxIcon.Error);
                 genreText.Focus();
                 isValid = false;
             }
-            else if (string.IsNullOrEmpty(yearText.Text)) //Check Year
+            //Check Year
+            else if (string.IsNullOrEmpty(yearText.Text))
             {
-                MB("The Year can't be blank!", "Error!", MessageBoxIcon.Error); //Message Box Pass Through Year
+                //Message Box Pass Through Year
+                MB("The Year can't be blank!", "Error!", MessageBoxIcon.Error);
                 yearText.Focus();
                 isValid = false;
             }
-            else if (string.IsNullOrEmpty(urlText.Text)) //Check URL
+            //Check URL
+            else if (string.IsNullOrEmpty(urlText.Text))
             {
-                MB("The URL can't be blank!", "Error!", MessageBoxIcon.Error); //Message Box Pass Through URl
+                //Message Box Pass Through URl
+                MB("The URL can't be blank!", "Error!", MessageBoxIcon.Error);
                 urlText.Focus();
                 isValid = false;
             }
@@ -78,14 +92,14 @@ namespace Swoger_CourseProject
         //*******************************
         //*********Clear Function********
         //*******************************
-        private void clear() //Method to clear all text box's
+        private void clear()
         {
             //Clears Text
-            titleText.Text = String.Empty;
-            artistText.Text = String.Empty;
-            genreText.Text = String.Empty;
-            yearText.Text = String.Empty;
-            urlText.Text = String.Empty;
+            titleText.Clear();
+            artistText.Clear();
+            genreText.ResetText();
+            yearText.Clear();
+            urlText.Clear();
 
             //Sets Focus
             _ = titleText.Focus();
