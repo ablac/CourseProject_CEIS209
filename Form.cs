@@ -96,14 +96,6 @@ namespace Swoger_CourseProject
         {
             clear();
         }
-        //*******************************
-        //*******Easter Egg Button*******
-        //*******************************
-        private void titleLabel_Click(object sender, EventArgs e)
-        {
-            MB("This is an EasterEgg LOL!", "Easter Egg :D", MessageBoxIcon.Exclamation);
-        }
-
     }
 }
 //***********************************************************************************************************
