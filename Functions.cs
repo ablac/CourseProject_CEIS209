@@ -28,9 +28,8 @@ namespace Swoger_CourseProject
         private bool SongInList(string SongTitle)
         {
             bool inList = false;
-            foreach (var item in songList.Items)
+            foreach (string currentSong in songList.Items)
             {
-                string currentSong = item as string;
                 if (SongTitle == currentSong)
                 {
                     inList = true;
