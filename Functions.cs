@@ -46,48 +46,34 @@ namespace Swoger_CourseProject
         //*******************************
         private bool ValidInput()
         {
-            bool isValid = true;
-            //Check Title
-            if (string.IsNullOrEmpty(titleText.Text))
+            Dictionary<string, TextBox> textBoxes = new Dictionary<string, TextBox>
             {
-                //Message Box Pass Through Title
-                MB("The Title can't be blank!", "Error!", MessageBoxIcon.Error);
-                titleText.Focus();
-                isValid = false;
-            }
-            //Check Artist
-            else if (string.IsNullOrEmpty(artistText.Text))
+                { "Title", titleText },
+                { "Artist", artistText },
+                { "Year" , yearText},
+                { "URL", urlText }
+            };
+            foreach (var item in textBoxes)
             {
-                //Message Box Pass Through Artist
-                MB("The Artist can't be blank!", "Error!", MessageBoxIcon.Error);
-                artistText.Focus();
-                isValid = false;
+                var name = item.Key;
+                var textbox = item.Value;
+
+                if (string.IsNullOrEmpty(textbox.Text))
+                {
+                    MB($"The {name} can't be blank!", "Error!", MessageBoxIcon.Error);
+                    textbox.Focus();
+                    return false;
+                }
             }
             //Check Genre
-            else if (string.IsNullOrEmpty(genreCombo.Text))
+            if (string.IsNullOrEmpty(genreCombo.Text))
             {
                 //Message Box Pass Through Genre
                 MB("The Genre can't be blank!", "Error!", MessageBoxIcon.Error);
                 genreCombo.Focus();
-                isValid = false;
+                return false;
             }
-            //Check Year
-            else if (string.IsNullOrEmpty(yearText.Text))
-            {
-                //Message Box Pass Through Year
-                MB("The Year can't be blank!", "Error!", MessageBoxIcon.Error);
-                yearText.Focus();
-                isValid = false;
-            }
-            //Check URL
-            else if (string.IsNullOrEmpty(urlText.Text))
-            {
-                //Message Box Pass Through URl
-                MB("The URL can't be blank!", "Error!", MessageBoxIcon.Error);
-                urlText.Focus();
-                isValid = false;
-            }
-            return isValid;
+            return true;
         }
         //*******************************
         //*********Clear Function********
