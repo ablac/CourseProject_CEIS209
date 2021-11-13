@@ -48,10 +48,10 @@ namespace Swoger_CourseProject
         {
             Dictionary<string, TextBox> textBoxes = new Dictionary<string, TextBox>
             {
-                { "Title", titleText },
-                { "Artist", artistText },
-                { "Year" , yearText},
-                { "URL", urlText }
+                {"Title", titleText},
+                {"Artist", artistText},
+                {"Year" , yearText},
+                {"URL", urlText}
             };
             foreach (var item in textBoxes)
             {
