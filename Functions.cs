@@ -68,7 +68,6 @@ namespace Swoger_CourseProject
             //Check Genre
             if (string.IsNullOrEmpty(genreCombo.Text))
             {
-                //Message Box Pass Through Genre
                 MB("The Genre can't be blank!", "Error!", MessageBoxIcon.Error);
                 genreCombo.Focus();
                 return false;
