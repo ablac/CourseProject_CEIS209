@@ -42,7 +42,7 @@ namespace Swoger_CourseProject
                 sb.Append(nl);
                 sb.Append(artistText.Text);
                 sb.Append(nl);
-                sb.Append(genreText.Text);
+                sb.Append(genreCombo.Text);
                 sb.Append(nl);
                 sb.Append(yearText.Text);
                 sb.Append(nl);

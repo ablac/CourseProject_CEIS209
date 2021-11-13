@@ -48,7 +48,7 @@
             this.findButton = new System.Windows.Forms.Button();
             this.clearSong = new System.Windows.Forms.Button();
             this.yearText = new System.Windows.Forms.TextBox();
-            this.genreText = new System.Windows.Forms.ComboBox();
+            this.genreCombo = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // addButton
@@ -81,6 +81,7 @@
             this.titleText.Name = "titleText";
             this.titleText.Size = new System.Drawing.Size(335, 35);
             this.titleText.TabIndex = 0;
+            this.titleText.Tag = "Title";
             // 
             // artistText
             // 
@@ -89,6 +90,7 @@
             this.artistText.Name = "artistText";
             this.artistText.Size = new System.Drawing.Size(335, 35);
             this.artistText.TabIndex = 1;
+            this.artistText.Tag = "Artist";
             // 
             // artistLabel
             // 
@@ -127,6 +129,7 @@
             this.urlText.Name = "urlText";
             this.urlText.Size = new System.Drawing.Size(335, 35);
             this.urlText.TabIndex = 4;
+            this.urlText.Tag = "URL";
             // 
             // urlLabel
             // 
@@ -257,10 +260,11 @@
             this.yearText.Name = "yearText";
             this.yearText.Size = new System.Drawing.Size(335, 35);
             this.yearText.TabIndex = 3;
+            this.yearText.Tag = "Year";
             // 
-            // genreText
+            // genreCombo
             // 
-            this.genreText.AutoCompleteCustomSource.AddRange(new string[] {
+            this.genreCombo.AutoCompleteCustomSource.AddRange(new string[] {
             "2 Tone",
             "2-Step",
             "2-Tone",
@@ -1122,11 +1126,12 @@
             "Zouk",
             "Zouk-Lambada",
             "Zydeco"});
-            this.genreText.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.genreText.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.genreText.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.genreText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.genreText.Items.AddRange(new object[] {
+            this.genreCombo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.genreCombo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.genreCombo.Cursor = System.Windows.Forms.Cursors.Default;
+            this.genreCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.genreCombo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.genreCombo.Items.AddRange(new object[] {
             "2 Tone",
             "2-Step",
             "2-Tone",
@@ -1988,17 +1993,18 @@
             "Zouk",
             "Zouk-Lambada",
             "Zydeco"});
-            this.genreText.Location = new System.Drawing.Point(214, 282);
-            this.genreText.Name = "genreText";
-            this.genreText.Size = new System.Drawing.Size(335, 37);
-            this.genreText.TabIndex = 2;
+            this.genreCombo.Location = new System.Drawing.Point(214, 282);
+            this.genreCombo.Name = "genreCombo";
+            this.genreCombo.Size = new System.Drawing.Size(335, 37);
+            this.genreCombo.TabIndex = 2;
+            this.genreCombo.Tag = "Genre";
             // 
             // VideoManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1258, 849);
-            this.Controls.Add(this.genreText);
+            this.Controls.Add(this.genreCombo);
             this.Controls.Add(this.clearSong);
             this.Controls.Add(this.findButton);
             this.Controls.Add(this.label2);
@@ -2048,7 +2054,7 @@
         private System.Windows.Forms.Button findButton;
         private System.Windows.Forms.Button clearSong;
         private System.Windows.Forms.TextBox yearText;
-        private System.Windows.Forms.ComboBox genreText;
+        private System.Windows.Forms.ComboBox genreCombo;
     }
 }
 

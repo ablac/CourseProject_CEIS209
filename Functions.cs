@@ -64,11 +64,11 @@ namespace Swoger_CourseProject
                 isValid = false;
             }
             //Check Genre
-            else if (string.IsNullOrEmpty(genreText.Text))
+            else if (string.IsNullOrEmpty(genreCombo.Text))
             {
                 //Message Box Pass Through Genre
                 MB("The Genre can't be blank!", "Error!", MessageBoxIcon.Error);
-                genreText.Focus();
+                genreCombo.Focus();
                 isValid = false;
             }
             //Check Year
@@ -97,7 +97,7 @@ namespace Swoger_CourseProject
             //Clears Text
             titleText.Clear();
             artistText.Clear();
-            genreText.SelectedIndex = -1;
+            genreCombo.SelectedIndex = -1;
             yearText.Clear();
             urlText.Clear();
 
