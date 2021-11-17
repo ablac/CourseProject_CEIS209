@@ -46,33 +46,26 @@ namespace Swoger_CourseProject
         //*******************************
         private bool ValidInput()
         {
-            Dictionary<string, TextBox> textBoxes = new Dictionary<string, TextBox>
-            {
-                {"Title", titleText},
-                {"Artist", artistText},
-                {"Year" , yearText},
-                {"URL", urlText}
-            };
-            foreach (var item in textBoxes)
-            {
-                var name = item.Key;
-                var textbox = item.Value;
+            bool isValid = true;
+            List<string[]> controlList = new List<string[]>(); //Control name, then display name.
 
-                if (string.IsNullOrEmpty(textbox.Text))
+            controlList.Add(new[] { "titleText", "Title" });
+            controlList.Add(new[] { "artistText", "Artist" });
+            controlList.Add(new[] { "genreCombo", "Genre" });
+            controlList.Add(new[] { "yearText", "Year" });
+            controlList.Add(new[] { "urlText", "URL" });
+
+            for (int i = 0; i < controlList.Count; i++)
+            {
+                if (string.IsNullOrEmpty(this.Controls[controlList[i][0]].Text))
                 {
-                    MB($"The {name} can't be blank!", "Error!", MessageBoxIcon.Error);
-                    textbox.Focus();
-                    return false;
+                    MB("The " + controlList[i][1] + " can't be blank!", "Error!", MessageBoxIcon.Error);
+                    this.Controls[controlList[i][0]].Focus();
+                    isValid = false;
+                    break;
                 }
             }
-            //Check Genre
-            if (string.IsNullOrEmpty(genreCombo.Text))
-            {
-                MB("The Genre can't be blank!", "Error!", MessageBoxIcon.Error);
-                genreCombo.Focus();
-                return false;
-            }
-            return true;
+            return isValid;
         }
         //*******************************
         //*********Clear Function********
