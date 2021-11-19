@@ -32,10 +32,24 @@ namespace Swoger_CourseProject
         //*******************************
         private void addButton_Click(object sender, EventArgs e)
         {
-            if (ValidInput())
+            if(songCount == titleArray.Length)
+                MB($"Song List Full", "Error!", MessageBoxIcon.Error);
+            else if (ValidInput())
             {
+                //Build String
                 StringBuilder sb = new StringBuilder(String.Empty);
                 string nl = "\r\n";
+
+                //Add title to song list
+                songList.Items.Add(titleText.Text);
+                titleArray[songCount] = titleText.Text;
+                artistArray[songCount] = artistText.Text;
+                genreArray[songCount] = genreCombo.SelectedItem.ToString();
+                yearArray[songCount] = int.Parse(yearText.Text);
+                urlArray[songCount] = urlText.Text;
+
+                //Increment the song counter
+                songCount++;
 
                 //Build the output Text
                 sb.Append(titleText.Text);
