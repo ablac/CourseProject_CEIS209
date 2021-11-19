@@ -154,6 +154,7 @@ namespace Swoger_CourseProject
                 fileWriter.WriteLine(titleArray[i]+","+artistArray[i]+","+genreArray[i]+","+yearArray[i].ToString()+","+ urlArray[i]);
             }
             //Close file
+            MB($"Saved to {FILENAME}", "Saved Successful!", MessageBoxIcon.Information);
             fileWriter.Close();
         }
 
@@ -178,6 +179,7 @@ namespace Swoger_CourseProject
                 count++;
             }
             //Close file
+            MB($"Loaded from {FILENAME}", "Load Successful!", MessageBoxIcon.Information);
             fileReader.Close();
 
             //Load songs in listbox
