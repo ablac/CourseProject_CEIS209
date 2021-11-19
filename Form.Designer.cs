@@ -150,7 +150,7 @@
             this.outputText.Multiline = true;
             this.outputText.Name = "outputText";
             this.outputText.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.outputText.Size = new System.Drawing.Size(435, 352);
+            this.outputText.Size = new System.Drawing.Size(385, 352);
             this.outputText.TabIndex = 999;
             this.outputText.TabStop = false;
             // 
@@ -195,7 +195,7 @@
             this.songList.ItemHeight = 29;
             this.songList.Location = new System.Drawing.Point(572, 79);
             this.songList.Name = "songList";
-            this.songList.Size = new System.Drawing.Size(435, 323);
+            this.songList.Size = new System.Drawing.Size(385, 323);
             this.songList.TabIndex = 998;
             this.songList.TabStop = false;
             this.songList.SelectedIndexChanged += new System.EventHandler(this.songList_SelectedIndexChanged);
@@ -2004,10 +2004,10 @@
             // 
             // webBrowserDisplay
             // 
-            this.webBrowserDisplay.Location = new System.Drawing.Point(1035, 79);
+            this.webBrowserDisplay.Location = new System.Drawing.Point(982, 79);
             this.webBrowserDisplay.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowserDisplay.Name = "webBrowserDisplay";
-            this.webBrowserDisplay.Size = new System.Drawing.Size(425, 323);
+            this.webBrowserDisplay.Size = new System.Drawing.Size(628, 352);
             this.webBrowserDisplay.TabIndex = 1000;
             // 
             // playButton
@@ -2015,7 +2015,7 @@
             this.playButton.BackColor = System.Drawing.SystemColors.HotTrack;
             this.playButton.Font = new System.Drawing.Font("Broadway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.playButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.playButton.Location = new System.Drawing.Point(1035, 448);
+            this.playButton.Location = new System.Drawing.Point(982, 475);
             this.playButton.Name = "playButton";
             this.playButton.Size = new System.Drawing.Size(195, 78);
             this.playButton.TabIndex = 1001;
@@ -2027,7 +2027,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1531, 849);
+            this.ClientSize = new System.Drawing.Size(1627, 849);
             this.Controls.Add(this.playButton);
             this.Controls.Add(this.webBrowserDisplay);
             this.Controls.Add(this.genreCombo);
