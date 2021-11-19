@@ -99,8 +99,15 @@ namespace Swoger_CourseProject
         {
             MessageBox.Show(Text, Title, MessageBoxButtons.OKCancel, ICON);
         }
-    }
-}
+        private int GetSongIndex(string songTitle)
+        {
+            int songIndex = songList.Items.IndexOf(songTitle);
+            return songIndex;
+        }
+
+
+    }//End Class
+}//End NameSpace
 //***********************************************************************************************************
 //**************************************BUTTONS CAN BE FOUND IN FORM.CS**************************************
 //***********************************************************************************************************
