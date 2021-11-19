@@ -95,7 +95,26 @@ namespace Swoger_CourseProject
             //Create messagebox is song is found/not found.
             if (SongInList(titleText.Text))
             {
-                MB($"Song {titleText.Text} Found", "Found Song!", MessageBoxIcon.Information);
+                int songIndex = GetSongIndex(titleText.Text);
+
+                StringBuilder sb = new StringBuilder(String.Empty);
+                string nl = "\r\n";
+                
+                //Build the output Text
+                sb.Append(titleText.Text);
+                sb.Append(nl);
+                sb.Append(artistArray[songIndex]);
+                sb.Append(nl);
+                sb.Append(genreArray[songIndex]);
+                sb.Append(nl);
+                sb.Append(yearArray[songIndex]);
+                sb.Append(nl);
+                sb.Append(urlArray[songIndex]);
+                sb.Append(nl);
+
+                //Output built text
+                outputText.Text = sb.ToString();
+                clear();
             }
             else
             {
