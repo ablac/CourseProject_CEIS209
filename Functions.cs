@@ -32,7 +32,7 @@ namespace Swoger_CourseProject
         int[] yearArray = new int[5];
         string[] urlArray = new string[5];
         int songCount = 0;
-
+        const String FILENAME = "Songs.txt";
         //*******************************
         //*******Song List Function******
         //*******************************
@@ -104,7 +104,9 @@ namespace Swoger_CourseProject
             int songIndex = songList.Items.IndexOf(songTitle);
             return songIndex;
         }
-
+        //*******************************
+        //*****Selected Song Function****
+        //*******************************
         private void songList_SelectedIndexChanged(object sender, EventArgs e)
         {
             int songIndex = songList.SelectedIndex;

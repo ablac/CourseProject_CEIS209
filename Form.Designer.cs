@@ -51,6 +51,8 @@
             this.genreCombo = new System.Windows.Forms.ComboBox();
             this.webBrowserDisplay = new System.Windows.Forms.WebBrowser();
             this.playButton = new System.Windows.Forms.Button();
+            this.saveButton = new System.Windows.Forms.Button();
+            this.loadButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // addButton
@@ -58,7 +60,7 @@
             this.addButton.BackColor = System.Drawing.SystemColors.HotTrack;
             this.addButton.Font = new System.Drawing.Font("Broadway", 12F, System.Drawing.FontStyle.Bold);
             this.addButton.ForeColor = System.Drawing.Color.White;
-            this.addButton.Location = new System.Drawing.Point(46, 448);
+            this.addButton.Location = new System.Drawing.Point(54, 426);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(195, 78);
             this.addButton.TabIndex = 5;
@@ -169,7 +171,7 @@
             this.allSongsButton.BackColor = System.Drawing.SystemColors.HotTrack;
             this.allSongsButton.Font = new System.Drawing.Font("Broadway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.allSongsButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.allSongsButton.Location = new System.Drawing.Point(278, 448);
+            this.allSongsButton.Location = new System.Drawing.Point(255, 426);
             this.allSongsButton.Name = "allSongsButton";
             this.allSongsButton.Size = new System.Drawing.Size(195, 78);
             this.allSongsButton.TabIndex = 6;
@@ -235,7 +237,7 @@
             this.findButton.BackColor = System.Drawing.SystemColors.HotTrack;
             this.findButton.Font = new System.Drawing.Font("Broadway", 12F, System.Drawing.FontStyle.Bold);
             this.findButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.findButton.Location = new System.Drawing.Point(46, 565);
+            this.findButton.Location = new System.Drawing.Point(54, 510);
             this.findButton.Name = "findButton";
             this.findButton.Size = new System.Drawing.Size(195, 78);
             this.findButton.TabIndex = 7;
@@ -248,7 +250,7 @@
             this.clearSong.BackColor = System.Drawing.SystemColors.HotTrack;
             this.clearSong.Font = new System.Drawing.Font("Broadway", 12F, System.Drawing.FontStyle.Bold);
             this.clearSong.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.clearSong.Location = new System.Drawing.Point(278, 565);
+            this.clearSong.Location = new System.Drawing.Point(255, 510);
             this.clearSong.Name = "clearSong";
             this.clearSong.Size = new System.Drawing.Size(195, 78);
             this.clearSong.TabIndex = 8;
@@ -2023,11 +2025,39 @@
             this.playButton.UseVisualStyleBackColor = false;
             this.playButton.Click += new System.EventHandler(this.playButton_Click);
             // 
+            // saveButton
+            // 
+            this.saveButton.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.saveButton.Font = new System.Drawing.Font("Broadway", 12F, System.Drawing.FontStyle.Bold);
+            this.saveButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.saveButton.Location = new System.Drawing.Point(54, 594);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(195, 78);
+            this.saveButton.TabIndex = 1002;
+            this.saveButton.Text = "Save Songs";
+            this.saveButton.UseVisualStyleBackColor = false;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
+            // 
+            // loadButton
+            // 
+            this.loadButton.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.loadButton.Font = new System.Drawing.Font("Broadway", 12F, System.Drawing.FontStyle.Bold);
+            this.loadButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.loadButton.Location = new System.Drawing.Point(255, 594);
+            this.loadButton.Name = "loadButton";
+            this.loadButton.Size = new System.Drawing.Size(195, 78);
+            this.loadButton.TabIndex = 1003;
+            this.loadButton.Text = "Load Songs";
+            this.loadButton.UseVisualStyleBackColor = false;
+            this.loadButton.Click += new System.EventHandler(this.loadButton_Click);
+            // 
             // VideoManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1627, 849);
+            this.Controls.Add(this.loadButton);
+            this.Controls.Add(this.saveButton);
             this.Controls.Add(this.playButton);
             this.Controls.Add(this.webBrowserDisplay);
             this.Controls.Add(this.genreCombo);
@@ -2083,6 +2113,8 @@
         private System.Windows.Forms.ComboBox genreCombo;
         private System.Windows.Forms.WebBrowser webBrowserDisplay;
         private System.Windows.Forms.Button playButton;
+        private System.Windows.Forms.Button saveButton;
+        private System.Windows.Forms.Button loadButton;
     }
 }
 

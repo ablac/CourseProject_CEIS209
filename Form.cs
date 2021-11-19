@@ -136,6 +136,59 @@ namespace Swoger_CourseProject
         {
             clear();
         }
+
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+            //Open the file
+            StreamWriter fileWriter = new StreamWriter(FILENAME);
+
+            //Write to file
+            for (int i = 0; i < titleArray.Length; i++)
+            {
+                //Break out when empty
+                if (string.IsNullOrEmpty(titleArray[i]))
+                {
+                    break;
+                }
+                //Write the fileds in CSV
+                fileWriter.WriteLine(titleArray[i]+","+artistArray[i]+","+genreArray[i]+","+yearArray[i].ToString()+","+ urlArray[i]);
+            }
+            //Close file
+            fileWriter.Close();
+        }
+
+        private void loadButton_Click(object sender, EventArgs e)
+        {
+            StreamReader fileReader = new StreamReader(FILENAME);
+            int count = 0;
+            
+            //Read Records till we run out
+            while(fileReader.Peek() > -1)
+            {
+                //Read entire line
+                string line = fileReader.ReadLine();
+                string[] parts = line.Split(',');
+                titleArray[count] = parts[0];
+                artistArray[count] = parts[1];
+                genreArray[count] = parts[2];
+                yearArray[count] = int.Parse(parts[3]);
+                urlArray[count] = parts[4];
+
+                //Increment counter
+                count++;
+            }
+            //Close file
+            fileReader.Close();
+
+            //Load songs in listbox
+            songList.Items.Clear();
+
+            for (int i = 0;i < titleArray.Length;i++)
+                if (string.IsNullOrEmpty(titleArray[i]))
+                    break;
+            else
+                songList.Items.Add(titleArray[i]);
+        }
     }//End Class
 }//End NameSpace
  //***********************************************************************************************************
