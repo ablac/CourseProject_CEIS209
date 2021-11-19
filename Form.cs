@@ -121,6 +121,15 @@ namespace Swoger_CourseProject
             }
         }
         //*******************************
+        //**********Play Button**********
+        //*******************************
+        private void playButton_Click(object sender, EventArgs e)
+        {
+            int songIndex = songList.SelectedIndex;
+            string url = urlArray[songIndex];
+            webBrowserDisplay.Navigate(url);
+        }
+        //*******************************
         //**********Clear Button*********
         //*******************************
         private void clearSong_Click(object sender, EventArgs e)

@@ -50,6 +50,7 @@
             this.yearText = new System.Windows.Forms.TextBox();
             this.genreCombo = new System.Windows.Forms.ComboBox();
             this.webBrowserDisplay = new System.Windows.Forms.WebBrowser();
+            this.playButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // addButton
@@ -57,7 +58,7 @@
             this.addButton.BackColor = System.Drawing.SystemColors.HotTrack;
             this.addButton.Font = new System.Drawing.Font("Broadway", 12F, System.Drawing.FontStyle.Bold);
             this.addButton.ForeColor = System.Drawing.Color.White;
-            this.addButton.Location = new System.Drawing.Point(122, 451);
+            this.addButton.Location = new System.Drawing.Point(46, 448);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(195, 78);
             this.addButton.TabIndex = 5;
@@ -69,7 +70,7 @@
             // 
             this.titleLabel.AutoSize = true;
             this.titleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.titleLabel.Location = new System.Drawing.Point(117, 208);
+            this.titleLabel.Location = new System.Drawing.Point(41, 191);
             this.titleLabel.Name = "titleLabel";
             this.titleLabel.Size = new System.Drawing.Size(66, 29);
             this.titleLabel.TabIndex = 1;
@@ -78,7 +79,7 @@
             // titleText
             // 
             this.titleText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titleText.Location = new System.Drawing.Point(214, 201);
+            this.titleText.Location = new System.Drawing.Point(138, 184);
             this.titleText.Name = "titleText";
             this.titleText.Size = new System.Drawing.Size(335, 35);
             this.titleText.TabIndex = 0;
@@ -87,7 +88,7 @@
             // artistText
             // 
             this.artistText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.artistText.Location = new System.Drawing.Point(214, 242);
+            this.artistText.Location = new System.Drawing.Point(138, 225);
             this.artistText.Name = "artistText";
             this.artistText.Size = new System.Drawing.Size(335, 35);
             this.artistText.TabIndex = 1;
@@ -97,7 +98,7 @@
             // 
             this.artistLabel.AutoSize = true;
             this.artistLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.artistLabel.Location = new System.Drawing.Point(117, 249);
+            this.artistLabel.Location = new System.Drawing.Point(41, 232);
             this.artistLabel.Name = "artistLabel";
             this.artistLabel.Size = new System.Drawing.Size(72, 29);
             this.artistLabel.TabIndex = 3;
@@ -107,7 +108,7 @@
             // 
             this.yearLabel.AutoSize = true;
             this.yearLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.yearLabel.Location = new System.Drawing.Point(117, 331);
+            this.yearLabel.Location = new System.Drawing.Point(41, 314);
             this.yearLabel.Name = "yearLabel";
             this.yearLabel.Size = new System.Drawing.Size(68, 29);
             this.yearLabel.TabIndex = 7;
@@ -117,7 +118,7 @@
             // 
             this.genreLabel.AutoSize = true;
             this.genreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.genreLabel.Location = new System.Drawing.Point(117, 290);
+            this.genreLabel.Location = new System.Drawing.Point(41, 273);
             this.genreLabel.Name = "genreLabel";
             this.genreLabel.Size = new System.Drawing.Size(85, 29);
             this.genreLabel.TabIndex = 5;
@@ -126,7 +127,7 @@
             // urlText
             // 
             this.urlText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.urlText.Location = new System.Drawing.Point(214, 365);
+            this.urlText.Location = new System.Drawing.Point(138, 348);
             this.urlText.Name = "urlText";
             this.urlText.Size = new System.Drawing.Size(335, 35);
             this.urlText.TabIndex = 4;
@@ -136,7 +137,7 @@
             // 
             this.urlLabel.AutoSize = true;
             this.urlLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.urlLabel.Location = new System.Drawing.Point(117, 372);
+            this.urlLabel.Location = new System.Drawing.Point(41, 355);
             this.urlLabel.Name = "urlLabel";
             this.urlLabel.Size = new System.Drawing.Size(63, 29);
             this.urlLabel.TabIndex = 9;
@@ -145,7 +146,7 @@
             // outputText
             // 
             this.outputText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.outputText.Location = new System.Drawing.Point(636, 451);
+            this.outputText.Location = new System.Drawing.Point(572, 448);
             this.outputText.Multiline = true;
             this.outputText.Name = "outputText";
             this.outputText.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -157,7 +158,7 @@
             // 
             this.detailsLabel.AutoSize = true;
             this.detailsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.detailsLabel.Location = new System.Drawing.Point(631, 419);
+            this.detailsLabel.Location = new System.Drawing.Point(567, 416);
             this.detailsLabel.Name = "detailsLabel";
             this.detailsLabel.Size = new System.Drawing.Size(94, 29);
             this.detailsLabel.TabIndex = 15;
@@ -168,7 +169,7 @@
             this.allSongsButton.BackColor = System.Drawing.SystemColors.HotTrack;
             this.allSongsButton.Font = new System.Drawing.Font("Broadway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.allSongsButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.allSongsButton.Location = new System.Drawing.Point(354, 451);
+            this.allSongsButton.Location = new System.Drawing.Point(278, 448);
             this.allSongsButton.Name = "allSongsButton";
             this.allSongsButton.Size = new System.Drawing.Size(195, 78);
             this.allSongsButton.TabIndex = 6;
@@ -180,7 +181,7 @@
             // 
             this.songListLabel.AutoSize = true;
             this.songListLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.songListLabel.Location = new System.Drawing.Point(631, 50);
+            this.songListLabel.Location = new System.Drawing.Point(567, 47);
             this.songListLabel.Name = "songListLabel";
             this.songListLabel.Size = new System.Drawing.Size(122, 29);
             this.songListLabel.TabIndex = 17;
@@ -192,7 +193,7 @@
             this.songList.FormattingEnabled = true;
             this.songList.HorizontalScrollbar = true;
             this.songList.ItemHeight = 29;
-            this.songList.Location = new System.Drawing.Point(636, 82);
+            this.songList.Location = new System.Drawing.Point(572, 79);
             this.songList.Name = "songList";
             this.songList.Size = new System.Drawing.Size(435, 323);
             this.songList.TabIndex = 998;
@@ -203,7 +204,7 @@
             // 
             this.titelName.AutoSize = true;
             this.titelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titelName.Location = new System.Drawing.Point(122, 50);
+            this.titelName.Location = new System.Drawing.Point(46, 33);
             this.titelName.Name = "titelName";
             this.titelName.Size = new System.Drawing.Size(493, 46);
             this.titelName.TabIndex = 997;
@@ -213,7 +214,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(206, 96);
+            this.label1.Location = new System.Drawing.Point(130, 79);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(263, 37);
             this.label1.TabIndex = 996;
@@ -223,7 +224,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(207, 133);
+            this.label2.Location = new System.Drawing.Point(131, 116);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(256, 37);
             this.label2.TabIndex = 995;
@@ -234,7 +235,7 @@
             this.findButton.BackColor = System.Drawing.SystemColors.HotTrack;
             this.findButton.Font = new System.Drawing.Font("Broadway", 12F, System.Drawing.FontStyle.Bold);
             this.findButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.findButton.Location = new System.Drawing.Point(122, 568);
+            this.findButton.Location = new System.Drawing.Point(46, 565);
             this.findButton.Name = "findButton";
             this.findButton.Size = new System.Drawing.Size(195, 78);
             this.findButton.TabIndex = 7;
@@ -247,7 +248,7 @@
             this.clearSong.BackColor = System.Drawing.SystemColors.HotTrack;
             this.clearSong.Font = new System.Drawing.Font("Broadway", 12F, System.Drawing.FontStyle.Bold);
             this.clearSong.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.clearSong.Location = new System.Drawing.Point(354, 568);
+            this.clearSong.Location = new System.Drawing.Point(278, 565);
             this.clearSong.Name = "clearSong";
             this.clearSong.Size = new System.Drawing.Size(195, 78);
             this.clearSong.TabIndex = 8;
@@ -258,7 +259,7 @@
             // yearText
             // 
             this.yearText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.yearText.Location = new System.Drawing.Point(214, 324);
+            this.yearText.Location = new System.Drawing.Point(138, 307);
             this.yearText.Name = "yearText";
             this.yearText.Size = new System.Drawing.Size(335, 35);
             this.yearText.TabIndex = 3;
@@ -1995,7 +1996,7 @@
             "Zouk",
             "Zouk-Lambada",
             "Zydeco"});
-            this.genreCombo.Location = new System.Drawing.Point(214, 282);
+            this.genreCombo.Location = new System.Drawing.Point(138, 265);
             this.genreCombo.Name = "genreCombo";
             this.genreCombo.Size = new System.Drawing.Size(335, 37);
             this.genreCombo.TabIndex = 2;
@@ -2003,17 +2004,31 @@
             // 
             // webBrowserDisplay
             // 
-            this.webBrowserDisplay.Location = new System.Drawing.Point(1099, 82);
+            this.webBrowserDisplay.Location = new System.Drawing.Point(1035, 79);
             this.webBrowserDisplay.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowserDisplay.Name = "webBrowserDisplay";
-            this.webBrowserDisplay.Size = new System.Drawing.Size(478, 564);
+            this.webBrowserDisplay.Size = new System.Drawing.Size(425, 323);
             this.webBrowserDisplay.TabIndex = 1000;
+            // 
+            // playButton
+            // 
+            this.playButton.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.playButton.Font = new System.Drawing.Font("Broadway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.playButton.Location = new System.Drawing.Point(1035, 448);
+            this.playButton.Name = "playButton";
+            this.playButton.Size = new System.Drawing.Size(195, 78);
+            this.playButton.TabIndex = 1001;
+            this.playButton.Text = "Play Song";
+            this.playButton.UseVisualStyleBackColor = false;
+            this.playButton.Click += new System.EventHandler(this.playButton_Click);
             // 
             // VideoManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1612, 849);
+            this.ClientSize = new System.Drawing.Size(1531, 849);
+            this.Controls.Add(this.playButton);
             this.Controls.Add(this.webBrowserDisplay);
             this.Controls.Add(this.genreCombo);
             this.Controls.Add(this.clearSong);
@@ -2067,6 +2082,7 @@
         private System.Windows.Forms.TextBox yearText;
         private System.Windows.Forms.ComboBox genreCombo;
         private System.Windows.Forms.WebBrowser webBrowserDisplay;
+        private System.Windows.Forms.Button playButton;
     }
 }
 
