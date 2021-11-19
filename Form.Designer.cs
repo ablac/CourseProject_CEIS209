@@ -53,6 +53,7 @@
             this.playButton = new System.Windows.Forms.Button();
             this.saveButton = new System.Windows.Forms.Button();
             this.loadButton = new System.Windows.Forms.Button();
+            this.videoLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // addButton
@@ -2006,10 +2007,10 @@
             // 
             // webBrowserDisplay
             // 
-            this.webBrowserDisplay.Location = new System.Drawing.Point(982, 79);
+            this.webBrowserDisplay.Location = new System.Drawing.Point(963, 79);
             this.webBrowserDisplay.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowserDisplay.Name = "webBrowserDisplay";
-            this.webBrowserDisplay.Size = new System.Drawing.Size(628, 352);
+            this.webBrowserDisplay.Size = new System.Drawing.Size(741, 637);
             this.webBrowserDisplay.TabIndex = 1000;
             // 
             // playButton
@@ -2017,7 +2018,7 @@
             this.playButton.BackColor = System.Drawing.SystemColors.HotTrack;
             this.playButton.Font = new System.Drawing.Font("Broadway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.playButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.playButton.Location = new System.Drawing.Point(982, 475);
+            this.playButton.Location = new System.Drawing.Point(982, 722);
             this.playButton.Name = "playButton";
             this.playButton.Size = new System.Drawing.Size(195, 78);
             this.playButton.TabIndex = 1001;
@@ -2051,11 +2052,22 @@
             this.loadButton.UseVisualStyleBackColor = false;
             this.loadButton.Click += new System.EventHandler(this.loadButton_Click);
             // 
+            // videoLabel
+            // 
+            this.videoLabel.AutoSize = true;
+            this.videoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.videoLabel.Location = new System.Drawing.Point(958, 47);
+            this.videoLabel.Name = "videoLabel";
+            this.videoLabel.Size = new System.Drawing.Size(162, 29);
+            this.videoLabel.TabIndex = 1004;
+            this.videoLabel.Text = "Video Player";
+            // 
             // VideoManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1627, 849);
+            this.ClientSize = new System.Drawing.Size(1716, 849);
+            this.Controls.Add(this.videoLabel);
             this.Controls.Add(this.loadButton);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.playButton);
@@ -2115,6 +2127,7 @@
         private System.Windows.Forms.Button playButton;
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.Button loadButton;
+        private System.Windows.Forms.Label videoLabel;
     }
 }
 

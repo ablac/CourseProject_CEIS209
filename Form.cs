@@ -175,8 +175,9 @@ namespace Swoger_CourseProject
                 yearArray[count] = int.Parse(parts[3]);
                 urlArray[count] = parts[4];
 
-                //Increment counter
+                //Increment counter and Song Counter
                 count++;
+                songCount++;
             }
             //Close file
             MB($"Loaded from {FILENAME}", "Load Successful!", MessageBoxIcon.Information);
