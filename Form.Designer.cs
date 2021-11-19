@@ -49,6 +49,7 @@
             this.clearSong = new System.Windows.Forms.Button();
             this.yearText = new System.Windows.Forms.TextBox();
             this.genreCombo = new System.Windows.Forms.ComboBox();
+            this.webBrowserDisplay = new System.Windows.Forms.WebBrowser();
             this.SuspendLayout();
             // 
             // addButton
@@ -148,7 +149,7 @@
             this.outputText.Multiline = true;
             this.outputText.Name = "outputText";
             this.outputText.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.outputText.Size = new System.Drawing.Size(583, 352);
+            this.outputText.Size = new System.Drawing.Size(435, 352);
             this.outputText.TabIndex = 999;
             this.outputText.TabStop = false;
             // 
@@ -193,7 +194,7 @@
             this.songList.ItemHeight = 29;
             this.songList.Location = new System.Drawing.Point(636, 82);
             this.songList.Name = "songList";
-            this.songList.Size = new System.Drawing.Size(583, 323);
+            this.songList.Size = new System.Drawing.Size(435, 323);
             this.songList.TabIndex = 998;
             this.songList.TabStop = false;
             // 
@@ -1999,11 +2000,20 @@
             this.genreCombo.TabIndex = 2;
             this.genreCombo.Tag = "Genre";
             // 
+            // webBrowserDisplay
+            // 
+            this.webBrowserDisplay.Location = new System.Drawing.Point(1099, 82);
+            this.webBrowserDisplay.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowserDisplay.Name = "webBrowserDisplay";
+            this.webBrowserDisplay.Size = new System.Drawing.Size(478, 564);
+            this.webBrowserDisplay.TabIndex = 1000;
+            // 
             // VideoManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1258, 849);
+            this.ClientSize = new System.Drawing.Size(1612, 849);
+            this.Controls.Add(this.webBrowserDisplay);
             this.Controls.Add(this.genreCombo);
             this.Controls.Add(this.clearSong);
             this.Controls.Add(this.findButton);
@@ -2055,6 +2065,7 @@
         private System.Windows.Forms.Button clearSong;
         private System.Windows.Forms.TextBox yearText;
         private System.Windows.Forms.ComboBox genreCombo;
+        private System.Windows.Forms.WebBrowser webBrowserDisplay;
     }
 }
 

@@ -24,6 +24,16 @@ namespace Swoger_CourseProject
     public partial class VideoManager
     {
         //*******************************
+        //**********Setup Array's********
+        //*******************************
+        string[] titleArray = new string[5];
+        string[] artistArray = new string[5];
+        string[] genreArray = new string[5];
+        int[] yearArray = new int[5];
+        string[] urlArray = new string[5];
+        int songCount = 0;
+
+        //*******************************
         //*******Song List Function******
         //*******************************
         private bool SongInList(string SongTitle)
