@@ -105,9 +105,30 @@ namespace Swoger_CourseProject
             return songIndex;
         }
 
+        private void songList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int songIndex = songList.SelectedIndex;
 
+            StringBuilder sb = new StringBuilder(String.Empty);
+            string nl = "\r\n";
+
+            //Build the output Text
+            sb.Append(titleArray[songIndex]);
+            sb.Append(nl);
+            sb.Append(artistArray[songIndex]);
+            sb.Append(nl);
+            sb.Append(genreArray[songIndex]);
+            sb.Append(nl);
+            sb.Append(yearArray[songIndex]);
+            sb.Append(nl);
+            sb.Append(urlArray[songIndex]);
+            sb.Append(nl);
+
+            //Output built text
+            outputText.Text = sb.ToString();
+        }
     }//End Class
 }//End NameSpace
-//***********************************************************************************************************
-//**************************************BUTTONS CAN BE FOUND IN FORM.CS**************************************
-//***********************************************************************************************************
+ //***********************************************************************************************************
+ //**************************************BUTTONS CAN BE FOUND IN FORM.CS**************************************
+ //***********************************************************************************************************

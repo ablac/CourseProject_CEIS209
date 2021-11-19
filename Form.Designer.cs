@@ -197,6 +197,7 @@
             this.songList.Size = new System.Drawing.Size(435, 323);
             this.songList.TabIndex = 998;
             this.songList.TabStop = false;
+            this.songList.SelectedIndexChanged += new System.EventHandler(this.songList_SelectedIndexChanged);
             // 
             // titelName
             // 

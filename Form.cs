@@ -32,7 +32,7 @@ namespace Swoger_CourseProject
         //*******************************
         private void addButton_Click(object sender, EventArgs e)
         {
-            if(songCount == titleArray.Length)
+            if (songCount == titleArray.Length)
                 MB("Song List Full", "Error!", MessageBoxIcon.Error);
             else if (ValidInput())
             {
@@ -99,9 +99,9 @@ namespace Swoger_CourseProject
 
                 StringBuilder sb = new StringBuilder(String.Empty);
                 string nl = "\r\n";
-                
+
                 //Build the output Text
-                sb.Append(titleText.Text);
+                sb.Append(titleArray[songIndex]);
                 sb.Append(nl);
                 sb.Append(artistArray[songIndex]);
                 sb.Append(nl);
@@ -114,7 +114,6 @@ namespace Swoger_CourseProject
 
                 //Output built text
                 outputText.Text = sb.ToString();
-                clear();
             }
             else
             {
@@ -130,6 +129,6 @@ namespace Swoger_CourseProject
         }
     }//End Class
 }//End NameSpace
-//***********************************************************************************************************
-//***********************************FUNCTIONS CAN BE FOUND IN FUNCTIONS.CS**********************************
-//***********************************************************************************************************
+ //***********************************************************************************************************
+ //***********************************FUNCTIONS CAN BE FOUND IN FUNCTIONS.CS**********************************
+ //***********************************************************************************************************
