@@ -33,14 +33,14 @@ namespace Swoger_CourseProject
         private void addButton_Click(object sender, EventArgs e)
         {
             if(songCount == titleArray.Length)
-                MB($"Song List Full", "Error!", MessageBoxIcon.Error);
+                MB("Song List Full", "Error!", MessageBoxIcon.Error);
             else if (ValidInput())
             {
                 //Build String
                 StringBuilder sb = new StringBuilder(String.Empty);
                 string nl = "\r\n";
 
-                //Add title to song list
+                //Add title to songlist/Add data to arrays
                 songList.Items.Add(titleText.Text);
                 titleArray[songCount] = titleText.Text;
                 artistArray[songCount] = artistText.Text;
@@ -65,7 +65,6 @@ namespace Swoger_CourseProject
 
                 //Output built text
                 outputText.Text = sb.ToString();
-                songList.Items.Add(titleText.Text);
                 clear();
             }
         }
