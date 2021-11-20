@@ -136,7 +136,9 @@ namespace Swoger_CourseProject
         {
             clear();
         }
-
+        //*******************************
+        //**********Save Button**********
+        //*******************************
         private void saveButton_Click(object sender, EventArgs e)
         {
             //Open the file
@@ -157,7 +159,9 @@ namespace Swoger_CourseProject
             MB($"Saved to {FILENAME}", "Saved Successful!", MessageBoxIcon.Information);
             fileWriter.Close();
         }
-
+        //*******************************
+        //**********Load Button**********
+        //*******************************
         private void loadButton_Click(object sender, EventArgs e)
         {
             StreamReader fileReader = new StreamReader(FILENAME);
